@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.headline-background {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/headline-background.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -999;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.headline-front-layer {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+}
+
+.headline-text-container {
+    margin: auto;
+    text-align: center;
+    color: #eee;
+    line-height: 90px;
+}
+
+.headline-text-container h1 {
+    font-size: 6rem;
+}
+
+.headline-text-container span {
+    color: salmon;
+}
+
+.tagline {
+    font-size: 3rem;
+}
+
+.bg-source {
+    font-size: 1.5rem;
+}
+
+.headline-text-container a {
+    text-decoration: none;
+    color: lightblue;
+    transition: 0.2s;
+}
+
+.headline-text-container a:hover {
+    color: yellow;
+    border-bottom: 2px solid yellow;
+    padding-bottom: 5px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    background-color: rgba(34,34,34,0.8);
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 3px 7px 0 rgba(0,0,0,0.3);
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+nav a {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: yellow;
+    border-bottom: 2px solid yellow;
+    padding-bottom: 5px;
+}
+
+.container-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+}
+
+.content-row {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.card-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-row h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: salmon;
+}
+
+.card {
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 1px 8px 1px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 250px;
+    height: 200px;
+    transition: 0.1s;
+    border-radius: 5px;
+}
+
+.card img:hover {
+    box-shadow: 0 2px 8px 2px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #385170;
+    border-radius: 5px;
+    color: #eee;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: salmon;
+    color: #222;
+    cursor: pointer;
+}
+
+hr {
+    margin: auto;
+    width: 80%;
+    border: 1px solid #ccc;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    background-color: #2f2f2f;
+    color: #ccc;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+}
+
+aside h2 {
+    font-size: 3rem;
+    color: salmon;
+}
+
+.about-container {
+    border: 2px solid #ccc;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+aside img {
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+aside h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.about-information {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    line-height: 25px;
+}
+
+.about-column-1 {
+    font-weight: bold;
+}
+
+.about-column-2 {
+    margin-left: 20px;
+}
+
+.about-column-2 a {
+    text-decoration: none;
+    color: lightblue;
+    transition: 0.2s;
+}
+
+.about-column-2 a:hover {
+    color: yellow;
+    border-bottom: 1px solid yellow;
+    padding-bottom: 2px
+}
+
+footer {
+    color: #ccc;
+    background-color: #222;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: lightblue;
+    transition: 0.2s;
+}
+
+footer a:hover {
+    color: yellow;
+    border-bottom: 1px solid yellow;
+    padding-bottom: 2px
+}
+
+.modal-container {
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    width: 80%;
+    height: 80%;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 10px;
+    color: #ccc;
+    text-align: center;
+    overflow: auto;
+}
+
+.modal-content img {
+    width: 800px;
+    height: 550px;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+
+.modal-content button {
+    margin-top: 60px;
+}
+
+.modal-row-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    line-height: 25px;
+}
+
+.modal-row-paragraf {
+    width: 90%;
+}
+
+.modal-row-paragraf h3 {
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width:1400px) {
+    .headline-text-container h1 {
+        font-size: 5rem;
+        line-height: 65px;
+    }
+
+    .tagline {
+        font-size: 2rem;
+    }
+    
+    .bg-source {
+        font-size: 1.3rem;
+    }
+    
+    .card {
+        margin: 10px;
+    }
+
+    .card-row h2 {
+        font-size: 2.5rem;
+    }
+
+    .card img {
+        width: 200px;
+        height: 150px;
+    }
+
+    .modal-content img {
+        width: 700px;
+        height: 450px;
+    }    
+}
+
+@media screen and (max-width: 1200px) {
+    .headline-text-container {
+        line-height: 65px;
+    }
+
+    .headline-text-container h1 {
+        font-size: 4rem;
+    }
+
+    .tagline {
+        font-size: 2rem;
+    }
+    
+    .bg-source {
+        font-size: 1.3rem;
+    }
+
+    nav li {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .card-row h2 {
+        font-size: 2rem;
+    }
+
+    .card img {
+        width: 150px;
+        height: 100px;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+    }
+
+    aside h2 {
+        font-size: 2rem;
+    }
+
+    .modal-content img {
+        width: 700px;
+        height: 450px;
+    }
+
+    .modal-row-2 {
+        font-size: 0.9rem;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .card {
+        margin: 20px;
+    }
+
+    .card-row {
+        flex-direction: column;
+    }
+
+    .card img {
+        width: 500px;
+        height: 350px;
+    }
+
+    .modal-content {
+        height: 60%
+    }
+
+    .modal-content img {
+        width: 400px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .headline-text-container {
+        line-height: 50px;
+    }
+
+    .headline-text-container h1 {
+        font-size: 3rem;
+    }
+
+    .tagline {
+        font-size: 1.5rem;
+    }
+    
+    .bg-source {
+        font-size: 1rem;
+    }
+
+    .card-row h2 {
+        font-size: 1.5rem;
+    }
+
+    .card img {
+        width: 300px;
+        height: 250px;
+    }
+
+    aside h2 {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+
+    .modal-content button {
+        width: 100px;
+        height: 30px;
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .headline-text-container {
+        line-height: 30px;
+    }
+
+    .headline-text-container h1 {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    .bg-source {
+        font-size: 0.8rem;
+    }
+
+    nav {
+        padding: 15px;
+    }
+
+    nav li {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    nav a {
+        font-size: 0.7rem;
+    }
+
+    .card img {
+        width: 200px;
+        height: 150px;
+    }
+
+    .about-container {
+        padding: 10px;
+    }
+
+    aside img {
+        width: 150px;
+    }
+
+    aside h3, .about-information {
+        font-size: 0.8rem;
+    }
+
+    footer {
+        font-size: 0.5rem;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .modal-content {
+        height: 65%;
+    }
+
+    .modal-content img {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    nav {
+        padding: 15px;
+    }
+
+    nav li {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    footer {
+        font-size: 0.3rem;
+    }
+
+    .modal-content img {
+        width: 200px;
+        height: 120px;
+    }
+}
